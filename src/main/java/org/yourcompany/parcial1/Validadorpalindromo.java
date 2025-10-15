@@ -3,11 +3,10 @@ import java.util.Scanner;
 
 public class Validadorpalindromo {
 
-    public static void validapalindromo(){
+    public static void validapalindromo(Scanner input){
 
-        Scanner palabra = new Scanner(System.in);
         System.out.println("Ingrese una palabra: ");
-        String palabra1 = palabra.nextLine();
+        String palabra1 = input.nextLine();
         String palabra2 = "";
         for (int i = palabra1.length() - 1; i >= 0; i--) {
             palabra2 += palabra1.charAt(i);

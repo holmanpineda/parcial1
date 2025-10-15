@@ -1,5 +1,6 @@
 package org.yourcompany.parcial1;
 import java.util.Scanner;
+import org.yourcompany.parcial1.Numeroperfecto;
 
 public class Menu {
 
@@ -23,9 +24,10 @@ while (choice != 10) {
 
     if (input.hasNextInt()) {
         choice = input.nextInt();
+        input.nextLine(); // consume the newline
     } else {
         System.out.println("That wasn't a number.");
-        input.next(); // skip bad input
+        input.nextLine(); // skip bad input safely
         continue;
     }
 
@@ -36,13 +38,13 @@ while (choice != 10) {
             // Zodiaco.zodiaco();
             break;
         case 2:
-            Validadoredad.validamayoriaedad();
+            Validadoredad.validamayoriaedad(input);
             break;
         case 3:
-            //Numeroperfecto.sumarDivisores();
+            Numeroperfecto.ejecutar(input);
             break;
         case 4:
-            Validadorpalindromo.validapalindromo();
+            Validadorpalindromo.validapalindromo(input);
             break;
         case 5:
             // Capicua.validarcapicua();
@@ -54,7 +56,7 @@ while (choice != 10) {
             // TextoAMorse.convertirTextoAMorse();
             break;
         case 8:
-            Caballero.Caballero;
+            //Caballero.Caballero;
             break;
         case 9:
             // JuegoLibre.juegoLibre();

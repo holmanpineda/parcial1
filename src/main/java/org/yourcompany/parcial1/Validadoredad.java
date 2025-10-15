@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class Validadoredad {
 
-    public static void validamayoriaedad(){
+    public static void validamayoriaedad(Scanner input){
 
-        Scanner edad = new Scanner(System.in);
         System.out.println("Ingrese su edad: ");
-        int edad1 = edad.nextInt();
+        int edad1 = input.nextInt();
+        input.nextLine(); // consume the newline
         if (edad1 >= 18){
             System.out.println("Usted es mayor de edad");
         } else {
